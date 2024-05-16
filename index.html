@@ -1,65 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encuentra tu Pareja</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        form {
-            margin-top: 20px;
-            text-align: center;
-        }
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatchMagiet</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header a img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .banner {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f7f7f7;
+    }
+    .banner img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .banner h2 {
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+    .banner p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    .banner a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .search-bar {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .search-bar input[type="text"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 400px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .search-bar button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #scroll-container {
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    #scroll-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-card {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .profile-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+    .profile-card h3 {
+      margin: 10px 0;
+    }
+    .profile-card p {
+      color: #777;
+    }
+    .profile-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .testimonials {
+      text-align: center;
+      padding: 20px;
+    }
+    .testimonials h2 {
+      margin-bottom: 20px;
+    }
+    .testimonial {
+      margin: 10px auto;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid #007bff;
+    }
+    .testimonial blockquote {
+      margin: 0;
+      font-style: italic;
+      color: #555;
+    }
+    .testimonial p {
+      margin-top: 10px;
+      color: #777;
+    }
+    .cta {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #007bff;
+      color: white;
+    }
+    .cta h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #007bff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Encuentra tu Pareja</h1>
-        <form action="#" method="post">
-            <input type="text" name="nombre" placeholder="Nombre" required><br>
-            <input type="email" name="email" placeholder="Correo Electrónico" required><br>
-            <input type="password" name="password" placeholder="Contraseña" required><br>
-            <input type="submit" value="Registrarse">
-        </form>
-    </div>
+  <header>
+    <a href="#">
+      <img src="logo.png" alt="MatchMagiet">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">¿Quiénes somos?</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <img src="tu-imagen.jpg" alt="Banner de MatchMagiet">
+      <h2>Encuentra a tu pareja ideal</h2>
+      <p>Descubre nuevas conexiones y experiencias significativas.</p>
+      <a href="#">¡Regístrate ahora!</a>
+    </section>
+
+    <section class="search-bar">
+      <form action="#">
+        <input type="text" placeholder="¿Qué tipo de persona buscas?">
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section id="scroll-container">
+      <h2>Perfiles destacados</h2>
+      <div class="profile-card">
+        <img src="profile-image.jpg" alt="Nombre del perfil">
+        <h3>Nombre del perfil</h3>
+        <p>Edad, Ciudad, Intereses</p>
+        <a href="#">Ver perfil completo</a>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Testimonios</h2>
+      <div class="testimonial">
+        <blockquote>
+          "MatchMagiet me ha ayudado a conocer a gente increíble y a ampliar mi círculo social."
+        </blockquote>
+        <p>- Ana, 28 años</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "Encontré a mi pareja ideal en MatchMagiet. ¡Estoy muy feliz!"
+        </blockquote>
+        <p>- Juan, 35 años</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>¿Estás buscando el amor?</h2>
+      <p>¡Regístrate en MatchMagiet y empieza a conocer gente nueva!</p>
+      <a href="#">¡Regístrate ahora!</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© MatchMagiet 2023</p>
+  </footer>
 </body>
 </html>
