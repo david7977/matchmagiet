@@ -1,0 +1,62 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    background-color: #f4f4f4; /* Color de fondo */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px 0; /* Relleno del encabezado */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px; /* Relleno del contenido principal */
+}
+
+/* Estilos para las secciones */
+section {
+    background-color: #fff; /* Color de fondo de la sección */
+    padding: 20px; /* Relleno de la sección */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra de la sección */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Usar flexbox para el formulario */
+    flex-direction: column; /* Colocar elementos en columna */
+}
+
+/* Estilos para las etiquetas */
+label {
+    margin: 10px 0 5px; /* Márgenes de las etiquetas */
+}
+
+/* Estilos para los campos de entrada */
+input {
+    padding: 10px; /* Relleno de los campos de entrada */
+    margin-bottom: 10px; /* Margen inferior de los campos de entrada */
+    border: 1px solid #ccc; /* Borde de los campos de entrada */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el botón */
+button {
+    padding: 10px; /* Relleno del botón */
+    background-color: #28a745; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+}
+
+/* Estilos para el botón al pasar el ratón */
+button:hover {
+    background-color: #218838; /* Color de fondo al pasar el ratón */
+}

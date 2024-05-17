@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../Proyecto prueba"
+		}
+	],
+	"settings": {
+		"github.copilot.chat.localeOverride": "es",
+		"typescript.locale": "es"
+	}
+}
