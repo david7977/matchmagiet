@@ -1,0 +1,19 @@
+1
+
+C:\Users\David>
+
+mongod --dbpath C:\data\db
+
+2
+cd C:\Users\David\Desktop\matchmagiet
+
+node server.js          Iniciar de forma manual 
+
+nodemon server.js       Iniciar de forma Automatica  
+
+3 
+detener los procesos 
+
+taskkill /PID 18412 /F
+ 
+    

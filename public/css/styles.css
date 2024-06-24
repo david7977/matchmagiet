@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  font-family: "Arial, sans-serif";
+  color: #333;
+  background: url('https://i.imgur.com/NG1eGqk.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5); /* Reducida opacidad */
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header nav {
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff6600;
+}
+
+header nav ul li a.inicio {
+  font-size: 1.2em; /* Tamaño más grande para "Inicio" */
+}
+
+header .logo {
+  margin-right: auto;
+}
+
+header .logo img {
+  width: 150px;
+  border: 2px solid #fff; /* Marco blanco */
+  border-radius: 50%; /* Bordes redondeados */
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.3); /* Reducida opacidad */
+  z-index: 999;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* Reducida opacidad contenedor */
+  z-index: 1;
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5); /* Reducida opacidad Cartel */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  display: inline-block;
+}
+
+.banner h2 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+}
+
+.banner p {
+  font-size: 1.2em;
+}
+
+.banner img {
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  object-position: center; /* Centra la imagen */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #ff6600; /* Color a juego con la imagen */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cc5200; /* Color más oscuro para el hover */
+}
+
+.centered-section {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2); /* Cambia la opacidad aquí */
+  color: #fff;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px); /* Ajusta la altura para llenar la pantalla, considerando el header y el footer */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos del formulario */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para los grupos de formularios */
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cta-text {
+  background: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 1em;
+  width: 70%;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ff6600; /* Color a juego con la imagen */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #cc5200; /* Color más oscuro para el hover */
+}
+
+#scroll-container {
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial {
+  width: 80%;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.testimonial blockquote {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.cta h2 {
+  font-size: 2em;
+}
+
+.cta p {
+  font-size: 1.2em;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-menu a:hover {
+  color: #ff6600;
+}
+
+.footer-menu span {
+  margin: 0 5px;
+}
+
+.footer-text {
+  font-size: 1em;
+  margin: 0 10px;
+  color: #fff;
+}
+
+.login-link {
+  color: #ff6600; /* Color naranja */
+}
+
+/* Estilo para el botón de inicio de sesión */
+.btn.login-btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007BFF; /* Azul para diferenciar del botón de registro */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn.login-btn:hover {
+  background-color: #0056b3; /* Azul más oscuro para el hover */
+}
