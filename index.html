@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo app-juego de ortografía</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div>
+        <h1>Demo app-juego de ortografía</h1>
+        <p>Sesiones cortas, reglas claras, práctica adaptativa.</p>
+      </div>
+      <div class="badges">
+        <span class="badge">Web</span>
+        <span class="badge">PWA</span>
+        <span class="badge">Freemium</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h2>Flujo de sesión (3–6 min)</h2>
+        <ol class="compact-list">
+          <li>Warmup de repaso (3 ítems rápidos).</li>
+          <li>Micro-lección de 1 regla con ejemplos.</li>
+          <li>Práctica adaptativa (10–15 ítems).</li>
+          <li>Mini-mix para asegurar transferencia.</li>
+          <li>Resumen con próximos pasos.</li>
+        </ol>
+        <button id="start-session">Probar sesión</button>
+      </div>
+
+      <div class="card">
+        <h2>Monetización y límites</h2>
+        <ul class="compact-list">
+          <li>Gratis: 3 sesiones/día + módulos básicos.</li>
+          <li>Pro: ilimitado, “solo mis fallos”, packs premium.</li>
+          <li>Paywall activo y estado de suscripción.</li>
+        </ul>
+        <button id="open-paywall">Ver paywall</button>
+      </div>
+
+      <div class="card">
+        <h2>Carga de contenido (JSON/CSV)</h2>
+        <p>Importa módulos, ítems y banco de palabras sin tocar código.</p>
+        <input type="file" id="content-file" accept=".json,.csv">
+        <div id="import-result" class="muted small"></div>
+      </div>
+    </section>
+
+    <section class="card session-area">
+      <div class="session-header">
+        <div>
+          <p class="label">Sesión demo</p>
+          <h3 id="session-step">Warmup</h3>
+          <p id="session-subtitle" class="muted">Repaso rápido para calibrar.</p>
+        </div>
+        <div class="session-metrics">
+          <div>
+            <p class="muted small">Precisión</p>
+            <p id="accuracy">–</p>
+          </div>
+          <div>
+            <p class="muted small">Racha</p>
+            <p id="streak">0</p>
+          </div>
+          <div>
+            <p class="muted small">Nuevos</p>
+            <p id="new-count">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="lesson" class="lesson hidden">
+        <p class="label">Micro-lección</p>
+        <h4 id="lesson-title"></h4>
+        <p id="lesson-body" class="muted"></p>
+        <ul id="lesson-examples" class="compact-list"></ul>
+      </div>
+
+      <div id="question-area" class="question-area">
+        <p id="prompt" class="prompt">Pulsa “Probar sesión” para empezar.</p>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="summary" class="summary hidden">
+        <h4>Resumen</h4>
+        <ul class="compact-list">
+          <li id="summary-accuracy"></li>
+          <li id="summary-errors"></li>
+          <li id="summary-next"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Analítica</h2>
+        <ul class="compact-list">
+          <li>Eventos: item_answered, session_completed, module_mastered.</li>
+          <li>Paywall: paywall_viewed, purchase_completed.</li>
+          <li>Vistas: estadísticas por regla, palabra, módulo.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Admin</h2>
+        <ul class="compact-list">
+          <li>Subir contenido JSON/CSV.</li>
+          <li>Activar/desactivar packs.</li>
+          <li>Ver errores de validación.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="popover" class="popover hidden"></div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
