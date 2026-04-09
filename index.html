@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotador de Puestos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Planificador de Rotaciones (Excel)</h1>
+    <p>Rota puestos de forma justa entre viernes y lunes sin perder el orden.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Configuración</h2>
+
+      <div class="field-group">
+        <label for="nuevoUsuario">Usuario</label>
+        <div class="inline-row">
+          <input id="nuevoUsuario" type="text" placeholder="Ej: Ana" />
+          <button id="agregarUsuario" type="button">Agregar</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="usuarios">Usuarios activos</label>
+        <select id="usuarios" size="8" aria-label="Lista de usuarios"></select>
+        <div class="inline-row">
+          <button id="quitarUsuario" type="button" class="secondary">Quitar seleccionado</button>
+          <button id="limpiarUsuarios" type="button" class="secondary">Vaciar lista</button>
+        </div>
+      </div>
+
+      <div class="field-grid">
+        <div class="field-group">
+          <label for="fechaInicio">Fecha de inicio</label>
+          <input id="fechaInicio" type="date" />
+        </div>
+
+        <div class="field-group">
+          <label for="semanas">Semanas</label>
+          <input id="semanas" type="number" min="1" max="52" value="4" />
+        </div>
+
+        <div class="field-group">
+          <label for="puestosActivos">Puestos activos (1 a 3)</label>
+          <select id="puestosActivos">
+            <option value="1">1 puesto</option>
+            <option value="2">2 puestos</option>
+            <option value="3">3 puestos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="inline-row">
+        <button id="generar" type="button">Generar calendario</button>
+        <button id="exportar" type="button" class="secondary">Exportar CSV (Excel)</button>
+      </div>
+
+      <p id="mensaje" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Vista previa</h2>
+      <div class="table-wrap">
+        <table id="tablaRotacion">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

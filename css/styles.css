@@ -1,62 +1,154 @@
-/* Estilos generales para el cuerpo de la página */
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #1b2430;
+  --muted: #5f6b7a;
+  --primary: #0a66ff;
+  --primary-dark: #004ec3;
+  --secondary: #e9eef8;
+  --border: #d7deea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif; /* Fuente predeterminada */
-    background-color: #f4f4f4; /* Color de fondo */
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin relleno */
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
 }
 
-/* Estilos para el encabezado */
 header {
-    background-color: #333; /* Color de fondo del encabezado */
-    color: #fff; /* Color del texto */
-    padding: 10px 0; /* Relleno del encabezado */
-    text-align: center; /* Texto centrado */
+  background: linear-gradient(110deg, #0a66ff, #5f9bff);
+  color: #fff;
+  padding: 1.4rem 1rem;
+  text-align: center;
 }
 
-/* Estilos para el contenido principal */
-main {
-    padding: 20px; /* Relleno del contenido principal */
+header h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.45rem;
 }
 
-/* Estilos para las secciones */
-section {
-    background-color: #fff; /* Color de fondo de la sección */
-    padding: 20px; /* Relleno de la sección */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra de la sección */
+header p {
+  margin: 0;
+  opacity: 0.95;
 }
 
-/* Estilos para el formulario */
-form {
-    display: flex; /* Usar flexbox para el formulario */
-    flex-direction: column; /* Colocar elementos en columna */
+.layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  padding: 1rem;
 }
 
-/* Estilos para las etiquetas */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(30, 43, 63, 0.06);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.field-group {
+  margin-bottom: 0.85rem;
+}
+
+.field-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
 label {
-    margin: 10px 0 5px; /* Márgenes de las etiquetas */
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
-/* Estilos para los campos de entrada */
-input {
-    padding: 10px; /* Relleno de los campos de entrada */
-    margin-bottom: 10px; /* Margen inferior de los campos de entrada */
-    border: 1px solid #ccc; /* Borde de los campos de entrada */
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-/* Estilos para el botón */
+input,
+select,
 button {
-    padding: 10px; /* Relleno del botón */
-    background-color: #28a745; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
 }
 
-/* Estilos para el botón al pasar el ratón */
+input,
+select {
+  padding: 0.55rem 0.6rem;
+}
+
+.inline-row {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+button {
+  padding: 0.58rem 0.8rem;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
 button:hover {
-    background-color: #218838; /* Color de fondo al pasar el ratón */
+  background: var(--primary-dark);
+}
+
+button.secondary {
+  background: var(--secondary);
+  color: var(--text);
+}
+
+button.secondary:hover {
+  background: #dbe6fb;
+}
+
+#usuarios {
+  min-height: 180px;
+}
+
+#mensaje {
+  min-height: 1.2rem;
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.table-wrap {
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.92rem;
+}
+
+th {
+  background: #f1f5fc;
+  position: sticky;
+  top: 0;
 }
